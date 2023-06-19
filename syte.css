@@ -1,0 +1,477 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    color:333;
+    margin:0;
+    line-height: 1.6;
+}
+
+*,
+*:before, 
+*:after {
+    box-sizing: border-box;
+ }
+
+
+ span, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, code, img, b, u, i, 
+ center, table, tr, th, td, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+ /* Container */
+ .container {
+   width: 100%;
+   max-width: 1400px;
+   margin: 0 auto;
+ }
+ /* Intro*/
+ .intro{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    position: center no-repeat;
+ }
+
+ .intro__inner{
+   width: 100%;
+   margin: 0 auto;
+
+   text-align: center;
+ }
+
+ .intro__title{
+   font-size: 40px;
+   font-weight: 700;
+   text-transform: uppercase;
+   line-height: 2;
+   color: black;
+ }
+
+ .intro__title:after{
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+
+   background-color: black;
+   margin: 60px auto 60px;
+   }
+
+
+   /* Header */
+   .header {
+      width: 100%;
+      padding-top: 5px;
+
+
+      position: absolute;
+      top:0;
+      left:0;
+      right:0;
+      z-index: 100;
+   }
+
+   .header__in{
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 60px;
+      background-color: black;
+      position: fixed;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+   }
+
+   .header__logo{
+      margin: 0 0 0 100px;
+   }
+
+/* Nav */
+
+ .nav{
+    font-size: 14px;
+    text-transform: uppercase;
+    margin: 0 200px 0 0;
+ }
+
+.nav__link{
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 20px;
+    position: relative;
+
+    color: white;
+    text-decoration: none;
+
+    transition: color 0.15s linear;
+ }
+
+.nav__link:hover{
+   color: red;
+}
+
+.nav__link:after {
+   content: "";
+   display: block;
+   width: 100%;
+   height: 3px;
+
+   opacity: 0;
+   background-color: red;
+
+   position: absolute;
+   top: 100%;
+   left: 0;
+   z-index: 1;
+
+   transition: opacity 0.15s linear;
+}
+
+
+ .nav__link:hover:after,
+ .nav__link.active:after{
+    opacity: 1;
+ }
+
+
+ /*Btn*/
+.button{
+    display: inline-block;
+    vertical-align: top;
+    padding: 12px 50px;
+
+    border: 3px solid black;
+
+    font-size: 16px;
+    font-weight: 700;
+    color: black;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    transition: background 0.15s linear, color 0.15s linear;
+}
+
+.button:hover{
+    background-color: black;
+    color: white;
+}
+
+
+/*TEXT*/
+.text__pes{
+   display: block;
+   margin: 10px 10px;
+}
+
+.image{
+   display: block;
+   width: 300px;
+   margin: 0 auto;
+}
+
+/*Section*/
+
+.section{
+   padding: 80px 0;
+}
+
+.section__header{
+   width: 100%;
+   max-width: 950px;
+   margin: 0 auto 40px;
+
+}
+
+.text__header{
+   font-size: 60px;
+   font-weight: 700;
+   line-height: 3;
+}
+
+
+/*Concert*/
+div.table {
+   display: table;
+   border-collapse: separate;
+   width: 100%;
+   height: 55px;
+   margin:0 auto 20px;
+}
+div.cell {
+   border: 2px solid white;
+   display: table-cell;
+}
+#c1 {
+   width: 400px;
+   background-color: black;
+
+}
+#c2 {
+   text-align: center;
+   width: 200px;
+   background-color: black;
+
+   transition: background 0.15s linear, color 0.15s linear;
+   cursor: pointer;
+}
+
+#c2:hover{
+   background-color: red;
+}
+.norm{
+   text-transform: uppercase;
+   color: white;
+   line-height: 50px;
+   font-size: 20px;
+   text-decoration: none;
+}
+
+.gorod{
+   padding: 0 0 0 20px;
+   text-transform: uppercase;
+   color: white;
+   line-height: 50px;
+   font-size: 20px;
+}
+.bio{
+   color: red;
+   padding: 0 0 0 20px;
+   text-transform: uppercase;
+}
+
+/*Shop*/
+
+.shop{
+   display: flex;
+   justify-content: space-between;
+
+}
+.about__shop{
+   object-fit: contain;
+   margin: auto;
+   top: 0;
+   bottom: 0;
+   right: 0;
+   left: 0;
+
+   position: relative;
+
+   background-color: #222;
+}
+.about__shop:hover .shop__image{
+   transform: translate3d(-10px, -10px, 0);
+   
+}
+.about__shop:hover .shop__image img{
+   opacity: 0.3;
+   
+}
+
+.shop__image{
+   background: linear-gradient(to bottom, #555555, #222);
+   cursor: pointer;
+
+   transition: transform 0.13s linear;
+}
+.shop__image img{
+   display: block;
+   transition: opacity 0.1 linear;
+
+}
+.about__text{
+   color: white;
+   text-transform: uppercase;
+   font-weight: bold;
+   font-size: 16px;
+   text-align: center;
+   width: 100%;
+   opacity: 0;
+
+   position: absolute;
+   top: 50%;
+   left: 0;
+   z-index: 2;
+   transform: translate3d(0, -50%, 0);
+
+   transition: opacity 0.25s linear;
+}
+.about__shop:hover .about__text{
+   opacity: 1;
+}
+
+/*Musuc*/
+
+.music{
+   display: flex;
+   justify-content: space-between;
+
+}
+.about__music{
+   object-fit: contain;
+   top: 0;
+   bottom: 0;
+   right: 0;
+   left: 0;
+}
+
+.music__inner{
+   position: relative;
+   background-color: #222;
+}
+
+.about__music:hover .music__image{
+   transform: translate3d(-10px, -10px, 0);
+   
+}
+.about__music:hover .music__image img{
+   opacity: 0.3;
+   
+}
+
+
+
+.music__image{
+   background: linear-gradient(to bottom, #555555, #222);
+   cursor: pointer;
+
+   transition: transform 0.13s linear;
+}
+.music__image img{
+   display: block;
+   transition: opacity 0.1 linear;
+
+}
+.about__text__music{
+   text-align: center;
+   width: 100%;
+   opacity: 0;
+
+   position: absolute;
+   top: 50%;
+   left: 0;
+   z-index: 2;
+   transform: translate3d(0, -50%, 0);
+
+   transition: opacity 0.2s linear;
+}
+.about__music:hover .about__text__music{
+   opacity: 1;
+}
+
+
+/*Social*/
+.social{
+   display: flex;
+   justify-content: center;
+}
+
+.social__item{
+   text-decoration: none;
+   line-height: 1;
+   
+}
+
+.image__mus{
+   width: 55px;
+   height: 55px;
+   max-width: 55px;
+   max-height: 55px;
+
+   transition: transform 0.15s linear;
+}
+
+.image__mus:hover{
+   transform: scale(1.4);
+}
+
+/*INFO*/
+
+.music__info{
+   margin-top: 20px;
+
+   text-align: center;
+}
+
+.music__name{
+   margin-bottom: 2px;
+
+   text-transform: uppercase;
+   color: black;
+   font-size: 16px;
+}
+
+.music__age{
+   color:red;
+   font-size: 15px;
+}
+
+/*contact*/
+
+.bg{
+   background-color: black;
+   width: 100%;
+}
+
+.textcols {
+   margin: 0 auto;
+
+   height: 300px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	width: 1200px;
+
+}
+.textcols-item {
+   margin-top: 30px;
+
+   width: 100px;
+   color: white;
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+	background: black;
+   text-align: center;
+
+}
+
+.inf{
+   color: red;
+   text-transform: uppercase;
+   font-size: 16px;
+}
+
+.mic__v{
+   font-size: 14px;
+   text-decoration: none;
+   color: white;
+}
+.mic{
+   font-size: 14px;
+   text-decoration: none;
+   color: orange;
+}
+
+.tg{
+   color:#6d0000;
+   font-size: 12px;
+}
+
+
+
+
+
+
+
+
+
+
+
